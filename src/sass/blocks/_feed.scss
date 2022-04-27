@@ -1,6 +1,8 @@
 .feed{
     padding-bottom: 71px;
     &__item{
+        animation: fadeInUp;
+        animation-duration: 2s;
         display: flex;
         margin-top: 100px;
         &:nth-child(2){

@@ -1,3 +1,4 @@
+new WOW().init();
 const images          = document.querySelectorAll('.carousel__img');
 const slides          = document.querySelector('.carousel__track');
 let   count           = 0;
@@ -5,7 +6,7 @@ let   width;
 
 const tabsBtn         = document.querySelectorAll('.catalog__tab');
 const contentItem     = document.querySelectorAll('.catalog_content');
-const getItem         = document.querySelectorAll('.catalog-item')
+const getItem         = document.querySelectorAll('.catalog-item');
 const thorough        = document.querySelectorAll('.catalog-item__link');
 const catalogItem     = document.querySelectorAll('.catalog-item__content');
 const catalogList     = document.querySelectorAll('.catalog-item__list');
@@ -17,7 +18,30 @@ const BuyModal        = document.getElementById('order');
 const getClose        = document.querySelectorAll('.modal');
 const getBuy          = document.querySelectorAll('.catalog_content');
 let getInputNumber    = document.querySelectorAll('input[type="tel"]');
-console.log(getInputNumber)
+
+//Smooth scroll and pageup
+const upBtn           = document.querySelector('.up');
+window.onscroll = function(){scrollFunction()};
+
+
+
+function scrollFunction(){
+    if(document.body.scrollTop > 1600 || document.documentElement.scrollTop > 1600){
+        upBtn.style.display = 'block';
+    }else{
+        upBtn.style.display = 'none';
+    }
+}
+upBtn.addEventListener('click', ()=>{
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth',
+    })
+})
+
+
+
 getBuy.forEach(function(item){
     item.addEventListener('click', (e)=>{
         let target     = e.target;

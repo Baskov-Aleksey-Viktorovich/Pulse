@@ -1,5 +1,6 @@
 @import "base/variables.scss";
 @import "base/breakpoints.scss";
+@import "base/animation";
 @import "blocks/promo.scss";
 @import "blocks/header.scss";
 @import "blocks/button.scss";
@@ -12,8 +13,10 @@
 @import "blocks/feed.scss";
 @import "blocks/footer";
 @import "blocks/modal";
+@import "blocks/up";
 * {
   font-family: $main-font, sans-serif;
+  font-display: swap;
 };
 h2{margin: 0;
 padding: 0;}
